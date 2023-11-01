@@ -11,8 +11,5 @@ https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?v
 --------------------------------------------------------------------------------------------------------------
 
 
-SQL in 28 days:
-https://docplayer.cz/2805056-Ryan-stephens-ron-plew-arie-d-jones-naucte-se-sql-za-28-dni.html
-
 Real SQL Queries 50 Challenges:
 http://www.cherrycreekeducation.com/bbk/b/CreateSpace_Real_SQL_Queries_50_Challenges_1517290708.pdf
