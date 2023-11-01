@@ -1,0 +1,18 @@
+--------------------------------------------------------------------------------------------------------------
+SQL Server:
+https://stackoverflow.com/questions/39835986/sql-server-2016-2017-and-2019-express-full-download
+
+SSMS:
+https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16
+
+Adventure Works database:
+https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms
+
+--------------------------------------------------------------------------------------------------------------
+
+
+SQL in 28 days:
+https://docplayer.cz/2805056-Ryan-stephens-ron-plew-arie-d-jones-naucte-se-sql-za-28-dni.html
+
+Real SQL Queries 50 Challenges:
+http://www.cherrycreekeducation.com/bbk/b/CreateSpace_Real_SQL_Queries_50_Challenges_1517290708.pdf
