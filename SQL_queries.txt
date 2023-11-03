@@ -1,11 +1,32 @@
+AdventureWorks2019
+-----------------------------------------------
 select * from INFORMATION_SCHEMA.COLUMNS
 where COLUMN_NAME like '%Entity%'
 -----------------------------------------------
 
+***************************************************************************************
+6. Adventure Works will feature one product for the cover of its print catalog. Help
+select a list of products for consideration.
 
-6.
+Your list should contain products which meet all of the following conditions:
+Finished goods (not products utilized to make other products)
+List price at least $1,500
+At least 150 in inventory
+Currently available for sale
+
+Your output should contain the following columns:
+ProductID
+ProductName
+Color
+ListPrice
+Inventory quantity
+
+
+Query:
 select ProductInventory.ProductID, Product.Name as ProductName, Product.Color, Product.ListPrice, sum(ProductInventory.Quantity) as "Inventory Quantity"
 from Production.Product
 inner join Production.ProductInventory on Product.ProductID=ProductInventory.ProductID
 where Product.ListPrice >= 1500 and Product.FinishedGoodsFlag = 1
 group by ProductInventory.ProductID, Product.Name, Product.Color, Product.ListPrice
+
+***************************************************************************************
