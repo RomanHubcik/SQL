@@ -1,0 +1,11 @@
+select * from INFORMATION_SCHEMA.COLUMNS
+where COLUMN_NAME like '%Entity%'
+-----------------------------------------------
+
+
+6.
+select ProductInventory.ProductID, Product.Name as ProductName, Product.Color, Product.ListPrice, sum(ProductInventory.Quantity) as "Inventory Quantity"
+from Production.Product
+inner join Production.ProductInventory on Product.ProductID=ProductInventory.ProductID
+where Product.ListPrice >= 1500 and Product.FinishedGoodsFlag = 1
+group by ProductInventory.ProductID, Product.Name, Product.Color, Product.ListPrice
