@@ -41,10 +41,7 @@ Maximum sale
 Average sale
 Median sale
 
-select year(OrderDate) as OrderYear, 
-min(SubTotal) as MinimumSale, 
-max(SubTotal) as MaximumSale, 
-avg(SubTotal) as AverageSale, ((max(SubTotal))+(min(SubTotal)))/2 as MedianSale 
+select year(OrderDate) as OrderYear, min(SubTotal) as MinimumSale, max(SubTotal) as MaximumSale, avg(SubTotal) as AverageSale, ((max(SubTotal))+(min(SubTotal)))/2 as MedianSale 
 from Sales.SalesOrderHeader
 group by year(OrderDate)
 order by OrderYear asc
