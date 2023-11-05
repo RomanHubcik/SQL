@@ -47,3 +47,18 @@ group by year(OrderDate)
 order by OrderYear asc
 
 ***************************************************************************************
+
+***************************************************************************************
+An accountant needs to add assumptions about sales tax rates to his Excel
+worksheet. He asks you to provide one sales tax rate, conservatively, for each of
+the countries in which tax rates are known.
+To fulfill his request, report the maximum sales tax rate of each country.
+
+select Person.StateProvince.Name, max(Sales.SalesTaxRate.TaxRate) as TaxRate
+from Sales.SalesTaxRate
+inner join Person.StateProvince on Sales.SalesTaxRate.StateProvinceID = Person.StateProvince.StateProvinceID 
+group by Sales.SalesTaxRate.StateProvinceID, Person.StateProvince.Name
+order by Name
+***************************************************************************************
+
+***************************************************************************************
