@@ -62,3 +62,22 @@ order by Name
 ***************************************************************************************
 
 ***************************************************************************************
+Create a summary table that shows, by territory, the percentage of orders placed
+online in comparison to orders not placed online.
+Your output should include the following columns:
+TerritoryID
+Total orders
+Percentage of orders placed online
+Percentage of orders not placed online
+To make the table easier to read, display percentages with a percent sign without
+decimals. For example, ninety five percent will be displayed as 95%.
+
+select Sales.SalesOrderHeader.TerritoryID, count(Sales.SalesOrderHeader.TerritoryID) as Total_Orders, 
+round(convert(float,(sum(case when Sales.SalesOrderHeader.OnlineOrderFlag = 1 then 1 else 0 end)))/count(Sales.SalesOrderHeader.TerritoryID)*100,0) as OnlineOrder, 
+round(convert(float,(sum(case when Sales.SalesOrderHeader.OnlineOrderFlag = 0 then 1 else 0 end)))/count(Sales.SalesOrderHeader.TerritoryID)*100,0) as OfflineOrder
+from Sales.SalesOrderHeader
+group by Sales.SalesOrderHeader.TerritoryID
+order by Sales.SalesOrderHeader.TerritoryID
+***************************************************************************************
+
+***************************************************************************************
